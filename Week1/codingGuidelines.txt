@@ -1,0 +1,5 @@
+The coding guidelines that i am following are:
+1. camelCase naming convention.
+2. meaningful variable naming which helps in explaining the code itself.
+3. Oneline code separation for better readibility.
+4. Using necessary and minimal comments for point out notes.
