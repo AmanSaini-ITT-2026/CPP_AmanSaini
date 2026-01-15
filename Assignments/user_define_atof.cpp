@@ -1,6 +1,6 @@
 #include <iostream>
 
-float userAtof(std::string str) {
+float userAtof(const char *str) {
     float result = 0.0;
     float fractionPart = 0.0;
     float divisor = 1.0;
@@ -11,7 +11,7 @@ float userAtof(std::string str) {
         index++;
     }
 
-    while(str[index] >= '0' && str[index] <= '9' && str[index + 1] != ' ') {
+    while(str[index] >= '0' && str[index] <= '9') {
         result = result * 10 + (str[index] - '0');
         index++;
     }
@@ -44,7 +44,7 @@ float userAtof(std::string str) {
 }
 
 int main() {
-    std::string str;
+    char str[100];
     std::cout << "Enter the value to convert in float: ";
     std::cin >> str;
     float result = userAtof(str);
