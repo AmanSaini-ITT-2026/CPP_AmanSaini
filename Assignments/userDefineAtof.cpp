@@ -12,7 +12,7 @@ float calculatePower(int exponent) {
     return power;
 }
 
-float userAtof(const char *string) {
+float convertToFloat(const char *string) {
     int index = 0;
     float result = 0.0f;
     float fraction = 0.0f;
@@ -133,7 +133,7 @@ int main() {
         std::cout << "Enter the value to convert in float: ";
         std::cin.getline(inputString, sizeof(inputString));
 
-        float result = userAtof(inputString);
+        float result = convertToFloat(inputString);
         std::cout << result << "\n";
     } while (askToContinue());
 

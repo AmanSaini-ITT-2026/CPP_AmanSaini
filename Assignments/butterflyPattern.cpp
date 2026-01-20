@@ -7,12 +7,12 @@ void printBinary(int length) {
     }
 }
 
-int absolute(int value) {
+int convertToAbsolute(int value) {
     return (value < 0) ? -value : value;
 }
 
-void butterflyPattern(int inputNumber) {
-    inputNumber = absolute(inputNumber);
+void printButterflyPattern(int inputNumber) {
+    inputNumber = convertToAbsolute(inputNumber);
     int middleRowWidth = (inputNumber % 2 == 0) ? (2 * inputNumber + 1) : (2 * inputNumber + 2);
  
     for (int upperHalfRows = 0; upperHalfRows < inputNumber; upperHalfRows++) {
@@ -118,7 +118,7 @@ int main() {
 
     do {
         inputNUmber = takeInput();
-        butterflyPattern(inputNUmber);
+        printButterflyPattern(inputNUmber);
     } while (askToContinue());
  
     return 0;
